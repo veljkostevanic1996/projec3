@@ -12,7 +12,7 @@ def lista = file.collect{ it}
 def line
 file.withReader {reader ->
     while ((line = reader.readLine()) != null){
-
+        println("ajde izmeni")
         println(line)
     }
 }
