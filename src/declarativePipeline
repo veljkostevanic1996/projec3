@@ -104,14 +104,6 @@ pipeline {
                 }
             }
         }
-        stage ('create and copy file'){
-            steps{
-                script{
-                   echo makeScript.createSomeFile()
-                }
-            }
-        }
-
 
     }
 
