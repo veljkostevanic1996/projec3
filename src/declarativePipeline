@@ -108,7 +108,7 @@ pipeline {
 
             steps{
 
-                sh 'touch newFile'
+                sh 'touch newFile.txt'
 
             }
         }
