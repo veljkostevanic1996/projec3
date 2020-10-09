@@ -107,7 +107,7 @@ pipeline {
         stage ('create and copy file'){
             steps{
                 script{
-                   makeScript.createSomeFile()
+                   echo makeScript.createSomeFile()
                 }
             }
         }
