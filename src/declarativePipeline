@@ -1,4 +1,4 @@
-@Library('jenkins-library') _
+@Library(['jenkins-library', 'brki-jenkins-library']) _
 // @Library('jenkins-library@1.0-SNAPSHOT') _
 // @Library(['jenkins-library@1.0-SNAPSHO',@Library('common-library@1.1-SNAPSHOT') _]) _
 
