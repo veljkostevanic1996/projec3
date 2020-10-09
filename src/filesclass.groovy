@@ -1,5 +1,5 @@
 
-File file = new File("probaFile.txt")
+File file = new File("probaFile.txt.txt")
 
 def fileContent = file.text
 
