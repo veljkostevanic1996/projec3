@@ -112,7 +112,7 @@ pipeline {
                 sh 'cd'
                 sh 'touch /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd /home/vstevanic/IdeaProjects/projec3/src'
-                sh 'sudo chmod 777 newFile.txt'
+                sh 'sudo chmod 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cat /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt >> newFile.txt'
             }
         }
