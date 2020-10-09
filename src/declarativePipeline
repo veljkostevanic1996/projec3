@@ -107,8 +107,8 @@ pipeline {
         stage ('create new file and copy something into it'){
 
             steps{
-
-                sh 'touch newFile.txt'
+                sh 'cd'
+                sh 'touch /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
 
             }
         }
