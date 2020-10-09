@@ -115,7 +115,7 @@ pipeline {
                 sh 'sudo chmod 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cp /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt  newFile.txt'
                 sh 'more /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt'
-                // zasto ne radi copy a sve putanje su dobre i ispisuje na terminalu sve lepo
+                // zasto ne radi copy a sve putanje su dobre i ispisuje na terminalu sve lepoi i z terminala prolazi sve lepo i za cp
             }
         }
 
