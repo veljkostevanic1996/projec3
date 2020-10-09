@@ -108,8 +108,10 @@ pipeline {
 
             steps{
                 sh 'cd'
+                sh 'rm -rf /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
+                sh 'cd'
                 sh 'touch /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
-
+                sh 'cp probaFile newFile'
             }
         }
 
