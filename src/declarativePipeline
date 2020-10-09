@@ -87,7 +87,7 @@ pipeline {
 
                 script {
 
-                    echo date.getTime()
+                    echo data.getTime()
 
                 }
                }
