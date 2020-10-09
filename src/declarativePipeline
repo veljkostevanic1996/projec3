@@ -1,0 +1,132 @@
+@Library('jenkins-library') _
+// @Library('jenkins-library@1.0-SNAPSHOT') _
+// @Library(['jenkins-library@1.0-SNAPSHO',@Library('common-library@1.1-SNAPSHOT') _]) _
+
+pipeline {
+
+    agent any
+
+    options{
+        ansiColor("xterm")
+    }
+
+    environment {
+
+        USER_NAME = 'Brki'
+    }
+
+    stages {
+
+        stage('Build') {
+
+        when {
+            expression {params.Option == true}
+        }
+
+            steps {
+
+                echo 'Building'
+            }
+        }
+
+        stage('Test') {
+
+            steps{
+
+                echo 'Testing'
+            }
+        }
+
+        stage('run parallel stages') {
+
+            steps {
+
+                parallel(
+
+                a: {
+                            echo 'parallel stage 1'
+                    },
+                b: {
+                         echo 'parallel stage 2'
+                     }
+
+                )
+            }
+        }
+
+        stage ('Execute shell script') {
+            options {
+                timestamps()
+            }
+            steps {
+            //This will print variable not set error
+            //echo "${LAST_NAME}"
+
+                sh 'ls'
+            }
+        }
+
+        stage ('env variables'){
+
+        environment {
+
+            LAST_NAME = 'Markovic'
+        }
+
+            steps {
+
+                echo "${env.BUILD_URL}"
+                echo "${USER_NAME}"
+                echo "${LAST_NAME}"
+            }
+        }
+
+        stage ('shared library method') {
+
+               steps {
+
+                script {
+
+                    echo date.getTime()
+
+                }
+
+               }
+        }
+
+        stage ('call another job') {
+
+            steps {
+
+                catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+
+                    build job: 'scripted pipeline'
+                }
+            }
+        }
+
+
+
+    }
+
+    post {
+
+        always {
+
+            echo 'Uvek se izvrsava'
+
+        }
+
+        success{
+
+            echo 'Samo ako je job uspesan'
+
+        }
+
+        failure {
+
+            echo 'Samo ako je job neuspesan'
+
+        }
+    }
+}
