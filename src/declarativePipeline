@@ -108,8 +108,8 @@ pipeline {
 
             steps{
 
-                ls 'mkdir newFile'
-                ls 'cp probaFile newFile'
+                sh 'mkdir newFile'
+                sh 'cp probaFile newFile'
             }
         }
 
