@@ -108,8 +108,8 @@ pipeline {
 
             steps{
 
-                sh 'mkdir newFile'
-                sh 'cp probaFile newFile'
+                sh 'touch newFile'
+
             }
         }
 
