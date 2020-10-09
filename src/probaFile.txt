@@ -1,4 +1,0 @@
-smtp=true
-host=www.google.com
-ip=198.65.46.02
-mail=google@gmail.com
