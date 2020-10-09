@@ -113,7 +113,7 @@ pipeline {
                 sh 'touch /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd /home/vstevanic/IdeaProjects/projec3/src'
                 sh 'sudo chmod 777 newFile.txt'
-                sh 'cp probaFile.txt newFile.txt'
+                sh 'cp /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt newFile.txt'
             }
         }
 
