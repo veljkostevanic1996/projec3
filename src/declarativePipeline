@@ -110,11 +110,12 @@ pipeline {
                 sh 'cd'
                 sh 'rm -rf /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd'
-                sh 'sudo touch 777 /home/vstevanic/IdeaProjects/projec3/src/newFile'
+                sh 'sudo touch 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd /home/vstevanic/IdeaProjects/projec3/src'
                 sh 'sudo chmod 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cp /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt  newFile.txt'
                 sh 'more /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt'
+                // zasto ne radi copy a sve putanje su dobre i ispisuje na terminalu sve lepo
             }
         }
 
