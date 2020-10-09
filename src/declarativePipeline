@@ -107,13 +107,14 @@ pipeline {
         stage ('create new file and copy something into it'){
 
             steps{
-                sh 'cd'
-                sh 'rm -rf /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
+                //sh 'cd'
+                //sh 'rm -rf /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd'
                 sh 'sudo touch 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cd /home/vstevanic/IdeaProjects/projec3/src'
                 sh 'sudo chmod 777 /home/vstevanic/IdeaProjects/projec3/src/newFile.txt'
                 sh 'cat /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt >> newFile.txt'
+                sh 'more /home/vstevanic/IdeaProjects/projec3/src/probaFile.txt'
             }
         }
 
