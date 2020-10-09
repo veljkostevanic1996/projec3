@@ -104,7 +104,13 @@ pipeline {
                 }
             }
         }
-
+        stage ('create and copy file'){
+            steps{
+                script{
+                   makeScropt.createSomeFile()
+                }
+            }
+        }
 
 
     }
