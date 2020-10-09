@@ -104,6 +104,15 @@ pipeline {
             }
         }
 
+        stage ('create new file and copy something into it'){
+
+            steps{
+
+                ls 'mkdir newFile'
+                ls 'cp probaFile newFile'
+            }
+        }
+
     }
 
     post {
