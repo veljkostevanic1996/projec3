@@ -120,8 +120,27 @@ pipeline {
             */
             }
         }
+        /*
+        stage('clone'){
 
-    }
+            steps{
+                    git branch: 'master',
+                    url: 'https://github.com/veljkostevanic1996/Maven1.git'
+
+            }
+        }
+
+        stage('mvn install'){
+
+            steps{
+                sh 'cd' && 'cd /home/vstevanic/Maven1'
+                withMaven{
+                   sh installMvn.install()
+                }
+            }
+        }
+        */
+       }
 
     post {
 

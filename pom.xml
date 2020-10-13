@@ -8,6 +8,11 @@
     <artifactId>projec3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--changed directoru when you want to build your maven aplication-->
+    <!--build>
+        <directory>/home/vstevanic/Desktop/Maven1/bild</directory>
+    </build>-->
+
     <dependencies>
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
